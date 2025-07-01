@@ -1,14 +1,13 @@
-
 const animais = ["leão", "tigre", "elefante", "girafa", "macaco"];
 
 function contarElementosArray(arr) {
-  let contador = 0; 
+	let contador = 0;
 
-  for (let i = 0; i < arr.length; i++) {
-    contador++; 
-  }
+	for (let i = 0; i < arr.length; i++) {
+		contador++;
+	}
 
-  return contador;
+	return contador;
 }
 
 const numeroDeAnimais = contarElementosArray(animais);
