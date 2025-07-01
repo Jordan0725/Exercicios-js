@@ -1,26 +1,22 @@
 
 function separaParImpar(nums) {
-
-    const pares = [];
-    const impares = [];
   
-    let indicePares = 0;
-    let indiceImpares = 0;
-  
-    for (let i = 0; i < nums.length; i++) {
-      const numeroAtual = nums[i]; 
+  let resultado = [[], []];
 
-      if (numeroAtual % 2 === 0) {
+  for (const numero of nums) {
 
-        pares[indicePares] = numeroAtual;
-        indicePares++;
-      } else {
-
-        impares[indiceImpares] = numeroAtual;
-        indiceImpares++;
-      }
+    if (numero % 2 === 0) {
+      resultado[0].push(numero);
+    } else {
+      resultado[1].push(numero);
     }
-
-    return [pares, impares];
   }
-  
+
+  return resultado;
+}
+
+
+const array = [10, 21, 32, 43, 54, 65];
+const arrayFinal = separaParImpar(array);
+
+console.log(arrayFinal); 
